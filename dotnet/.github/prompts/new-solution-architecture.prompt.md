@@ -12,6 +12,11 @@ Usa `/ai-baseline/` y `/ai-extensions/architecture/`. Aplica las skills `archite
 - Requisitos principales (funcionales y no funcionales): ${input:requirements}
 - Restricciones (equipo, infraestructura, plazos, integraciones existentes): ${input:constraints}
 
+### Ejemplos de valores de parámetros
+- Dominio: Sistema de inventario para una pequeña distribuidora que administra productos llamada "Coffee And Data".
+- Requisitos: Crear y consultar productos; API REST de uso interno, con pocos usuarios concurrentes y sin alta disponibilidad requerida.
+- Restricciones: Equipo de 1 desarrollador con experiencia en C# y ASP.NET Core. Despliegue en local; SQL Server disponible; sin integraciones externas en la primera versión; plazo inicial de 1 semana.
+
 ## Entregable esperado
 1. Capas propuestas (Domain, Application, Infrastructure, Presentation, y otras si se justifican) y dirección de dependencias.
 2. Proyectos/carpetas por capa, con convención de namespaces.
