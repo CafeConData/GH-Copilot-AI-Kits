@@ -4,6 +4,7 @@ Common rules: `/ai-baseline/`.
 ## Extensions
 - `/ai-extensions/api/`
 - `/ai-extensions/testing/`
+- `/ai-extensions/architecture/`
 
 ## GitHub Copilot
 `.github/` contains instructions, specialized agents and their skills.
@@ -18,7 +19,8 @@ Common rules: `/ai-baseline/`.
 │   └── testing.instructions.md
 ├── agents/                         # Agentes especializados
 │   ├── api-developer.agent.md
-│   └── test-engineer.agent.md
+│   ├── test-engineer.agent.md
+│   └── architect.agent.md
 └── skills/                         # Procedimientos reutilizables
     ├── create-endpoint/
     │   └── SKILL.md
