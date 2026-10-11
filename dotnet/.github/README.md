@@ -21,11 +21,14 @@ Common rules: `/ai-baseline/`.
 │   ├── api-developer.agent.md
 │   ├── test-engineer.agent.md
 │   └── architect.agent.md
-└── skills/                         # Procedimientos reutilizables
-    ├── create-endpoint/
-    │   └── SKILL.md
-    └── create-unit-tests/
-        └── SKILL.md
+├── skills/                         # Procedimientos reutilizables
+│   ├── create-endpoint/
+│   │   └── SKILL.md
+│   └── create-unit-tests/
+│       └── SKILL.md
+└── prompts/                        # Prompts reutilizables (slash commands)
+    ├── new-solution-architecture.prompt.md
+    └── scaffold-solution.prompt.md
 ```
 
 Los nombres de ejemplo corresponden a un kit .NET. Otras tecnologías pueden definir instrucciones, agentes y skills diferentes.
@@ -104,6 +107,31 @@ Las skills responden a **«¿cómo se realiza esta tarea?»**. Copilot puede des
 
 **Importante sobre la ubicación:** para maximizar la compatibilidad, se recomienda colocar cada skill directamente bajo `.github/skills/<nombre>/SKILL.md`. Si el equipo quiere agruparlas visualmente por especialización, puede usar prefijos en los nombres (por ejemplo, `api-create-endpoint/` y `testing-create-unit-tests/`). No debe darse por supuesto que una estructura adicional como `.github/skills/api/create-endpoint/SKILL.md` se descubrirá en todas las implementaciones.
 
+### `prompts/`: prompts reutilizables para arrancar un flujo de trabajo
+
+Contiene **prompt files**: plantillas de prompt reutilizables, invocables como slash command (`/nombre-del-prompt`) desde Copilot Chat, pensadas para arrancar una tarea completa (por ejemplo, diseñar la arquitectura de una solución nueva) sin tener que redactar el prompt cada vez.
+
+**Convención reconocida en VS Code/Copilot Chat:** `.github/prompts/<nombre>.prompt.md`. El encabezado YAML admite, entre otros, `description`, `name`, `agent` (agente al que se dirige el prompt, puede ser uno personalizado como `architect`) y `argument-hint`. El cuerpo es Markdown y puede usar variables `${input:variable}` que Copilot solicitará al invocar el prompt.
+
+Ejemplo de `new-solution-architecture.prompt.md` (resumido):
+
+```
+---
+description: "Propone una Clean Architecture completa para una solución .NET nueva"
+name: new-solution-architecture
+agent: architect
+argument-hint: "Dominio, requisitos y restricciones de la nueva solución"
+---
+
+- Dominio: ${input:domain}
+- Requisitos: ${input:requirements}
+- Restricciones: ${input:constraints}
+
+Entrega capas, proyectos, patrones, cross-cutting concerns y próximos pasos.
+```
+
+A diferencia de las skills (que un agente descubre y aplica cuando resulta relevante), un prompt file se **invoca explícitamente** por el desarrollador, normalmente al principio de una tarea nueva (p. ej. "empezar una solución desde cero").
+
 ### Convenciones frente a documentación propia
 
 | Elemento | ¿Lo reconoce Copilot por convención? | Para qué sirve |
@@ -112,6 +140,7 @@ Las skills responden a **«¿cómo se realiza esta tarea?»**. Copilot puede des
 | `.github/instructions/**/*.instructions.md` | Sí | Reglas específicas de archivos, normalmente mediante `applyTo` |
 | `.github/agents/*.agent.md` | Sí, en las superficies compatibles | Perfiles de agentes personalizados |
 | `.github/skills/<skill>/SKILL.md` | Sí, con soporte de Agent Skills | Procedimientos reutilizables |
+| `.github/prompts/*.prompt.md` | Sí, como slash commands en Copilot Chat | Prompts reutilizables para arrancar una tarea |
 | `ai-baseline/*.md`, `api/*.md`, `testing/*.md` | No por esos nombres | Conocimiento propio del AI-Kit |
 | `.github/README.md` | No | Documentación para personas |
 
@@ -145,3 +174,5 @@ El repositorio de AI-Kits es el **origen de las plantillas**; el proyecto consum
 - [Instrucciones personalizadas y compatibilidad](https://docs.github.com/en/copilot/reference/custom-instructions-support)
 - [Uso de agentes personalizados en el IDE](https://docs.github.com/en/copilot/how-tos/copilot-in-your-ide/use-copilot-agents/use-custom-agents)
 - [Creación de Agent Skills](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills)
+- [Prompt files en VS Code](https://code.visualstudio.com/docs/agent-customization/prompt-files)
+- [Prompt files en GitHub Copilot Chat](https://docs.github.com/en/copilot/github-copilot-chat/customizing-github-copilot-chat/prompt-files)
