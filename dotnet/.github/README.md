@@ -18,8 +18,8 @@ Common rules: `/ai-baseline/`.
 │   ├── api.instructions.md
 │   └── testing.instructions.md
 ├── agents/                         # Agentes especializados
-│   ├── api-developer.agent.md
-│   ├── test-engineer.agent.md
+│   ├── developer.agent.md
+│   ├── tester.agent.md
 │   └── architect.agent.md
 ├── skills/                         # Procedimientos reutilizables
 │   ├── create-endpoint/
@@ -67,11 +67,11 @@ Contiene **agentes personalizados**: perfiles que describen una especialización
 
 **Convención reconocida en VS Code:** `.github/agents/<nombre>.agent.md`. Estos perfiles pueden aparecer en el selector de agentes de Copilot Chat, según la versión y las capacidades habilitadas.
 
-Ejemplo de `api-developer.agent.md`:
+Ejemplo de `developer.agent.md`:
 
 ```
 ---
-name: api-developer
+name: developer
 description: Implementa y revisa APIs ASP.NET Core.
 ---
 

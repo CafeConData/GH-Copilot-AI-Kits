@@ -1,5 +1,5 @@
 ---
-name: test-engineer
+name: tester
 description: Designs Databricks tests/data-quality checks.
 ---
 # Test Engineer

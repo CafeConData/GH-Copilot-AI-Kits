@@ -1,5 +1,5 @@
 ---
-name: test-engineer
+name: tester
 description: Designs and reviews automated .NET tests.
 ---
 # Test Engineer

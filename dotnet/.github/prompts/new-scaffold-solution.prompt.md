@@ -1,6 +1,6 @@
 ---
 description: "Genera el scaffolding de proyectos de una solución .NET a partir de una arquitectura ya aprobada"
-name: scaffold-solution
+name: new-scaffold-solution
 agent: architect
 argument-hint: "Resumen de la arquitectura aprobada (capas, proyectos, patrones)"
 ---
@@ -15,7 +15,7 @@ ${input:approvedArchitecture}
 2. Referencias entre proyectos respetando la dirección de dependencias.
 3. Convención de namespaces y carpetas dentro de cada proyecto.
 4. Paquetes NuGet mínimos imprescindibles por capa (sin añadir dependencias especulativas).
-5. Siguiente paso recomendado: delegar en `api-developer` la implementación del primer caso de uso.
+5. Siguiente paso recomendado: delegar en `developer` la implementación del primer caso de uso.
 
 
 ## Ejemplos de valor de parámetros
@@ -58,4 +58,4 @@ Paquetes mínimos:
 
 Usar casos de uso explícitos e inyección por constructor. Permitir un contrato específico de persistencia de productos en Application, implementado en Infrastructure, sin exponer tipos de EF Core ni IQueryable. No introducir Mediator, CQRS, repositorios genéricos, Unit of Work adicional ni infraestructura distribuida.
 
-No implementar entidades, contratos ni casos de uso todavía. Entregar únicamente comandos de scaffolding, referencias, paquetes y estructura propuesta. Siguiente paso: delegar en api-developer la creación de producto, tras acordar sus campos y reglas de duplicados.
+No implementar entidades, contratos ni casos de uso todavía. Entregar únicamente comandos de scaffolding, referencias, paquetes y estructura propuesta. Siguiente paso: delegar en developer la creación de producto, tras acordar sus campos y reglas de duplicados.

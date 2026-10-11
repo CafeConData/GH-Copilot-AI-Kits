@@ -1,5 +1,5 @@
 ---
-name: api-developer
+name: developer
 description: Implements and reviews ASP.NET Core APIs.
 ---
 # API Developer

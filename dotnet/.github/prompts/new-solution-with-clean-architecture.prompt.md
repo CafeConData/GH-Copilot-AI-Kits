@@ -1,6 +1,6 @@
 ---
 description: "Propone una Clean Architecture completa para una solución .NET nueva, desde cero"
-name: new-solution-architecture
+name: new-solution-with-clean-architecture
 agent: architect
 argument-hint: "Dominio, requisitos principales y restricciones de la nueva solución"
 ---
@@ -23,6 +23,6 @@ Usa `/ai-baseline/` y `/ai-extensions/architecture/`. Aplica las skills `archite
 3. Patrones a aplicar y patrones a evitar, según `/ai-extensions/architecture/design-patterns.md`.
 4. Cross-cutting concerns: inyección de dependencias, manejo de errores, observabilidad.
 5. Riesgos, trade-offs y alternativas descartadas.
-6. Próximos pasos sugeridos para `api-developer` y `test-engineer`.
+6. Próximos pasos sugeridos para `developer` y `tester`.
 
 No generes código todavía: produce solo la propuesta de arquitectura para validarla antes de crear el scaffolding de proyectos.
