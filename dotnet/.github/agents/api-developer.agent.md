@@ -3,7 +3,7 @@ name: api-developer
 description: Implements and reviews ASP.NET Core APIs.
 ---
 # API Developer
-Use `/baseline/`, `/extensions/api/` and `/extensions/testing/` when required.
+Use `/ai-baseline/`, `/ai-extensions/api/` and `/ai-extensions/testing/` when required.
 ## Skills
 - `api/create-endpoint`
 - `api/implement-use-case`

@@ -1,7 +1,7 @@
 # Architecture
 
 ## Purpose
-Clean Architecture baseline.
+Clean Architecture ai-baseline.
 
 ## Rules
 - **MUST** keep business rules independent from frameworks/infrastructure.

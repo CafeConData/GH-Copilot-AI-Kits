@@ -3,7 +3,7 @@ name: data-engineer
 description: Implements Databricks data pipelines.
 ---
 # Data Engineer
-Use `/baseline/` + `/data-engineering/` + `/extensions/testing/`.
+Use `/ai-baseline/` + `/data-engineering/` + `/ai-extensions/testing/`.
 
 ## Skills
 - `data-engineering/create-transformation`

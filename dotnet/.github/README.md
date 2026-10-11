@@ -1,9 +1,9 @@
 # .NET AI-Kit
 ## Baseline
-Common rules: `/baseline/`.
+Common rules: `/ai-baseline/`.
 ## Extensions
-- `/extensions/api/`
-- `/extensions/testing/`
+- `/ai-extensions/api/`
+- `/ai-extensions/testing/`
 
 ## GitHub Copilot
 `.github/` contains instructions, specialized agents and their skills.
@@ -51,7 +51,7 @@ applyTo: "**/*Tests/**/*.cs"
 
 - Test observable behavior.
 - Keep tests deterministic.
-- Follow the testing baseline defined by this AI-Kit.
+- Follow the testing ai-baseline defined by this AI-Kit.
 ```
 
 Cuando Copilot trabaja con archivos que coinciden con el patrón, puede combinar estas reglas con las instrucciones generales del repositorio. **No se seleccionan agentes por estar en esta carpeta**: aquí se definen reglas, no roles.
@@ -110,7 +110,7 @@ Las skills responden a **«¿cómo se realiza esta tarea?»**. Copilot puede des
 | `.github/instructions/**/*.instructions.md` | Sí | Reglas específicas de archivos, normalmente mediante `applyTo` |
 | `.github/agents/*.agent.md` | Sí, en las superficies compatibles | Perfiles de agentes personalizados |
 | `.github/skills/<skill>/SKILL.md` | Sí, con soporte de Agent Skills | Procedimientos reutilizables |
-| `baseline/*.md`, `api/*.md`, `testing/*.md` | No por esos nombres | Conocimiento propio del AI-Kit |
+| `ai-baseline/*.md`, `api/*.md`, `testing/*.md` | No por esos nombres | Conocimiento propio del AI-Kit |
 | `.github/README.md` | No | Documentación para personas |
 
 Los documentos de conocimiento pueden ser consultados por Copilot si se le indican o se incorporan al contexto; **no se cargan automáticamente solo por estar en esas carpetas**. Tampoco debe asumirse que una referencia genérica a una carpeta hace que Copilot lea todos sus documentos.

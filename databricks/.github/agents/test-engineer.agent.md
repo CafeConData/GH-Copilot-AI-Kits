@@ -3,7 +3,7 @@ name: test-engineer
 description: Designs Databricks tests/data-quality checks.
 ---
 # Test Engineer
-Use `/baseline/` + `/extensions/testing/`.
+Use `/ai-baseline/` + `/ai-extensions/testing/`.
 
 ## Skills
 - `testing/create-transformation-tests`
