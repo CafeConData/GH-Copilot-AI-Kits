@@ -1,8 +1,8 @@
 
 ---
 description: "Implementa CRUD de productos en la solución CoffeeAndData existente."
-name: new-crud-entity
-agent: architect
+name: developer-new-crud
+agent: developer
 argument-hint: "Resumen de acciones CRUD a implementar"
 ---
 

@@ -1,6 +1,6 @@
 ---
 description: "Genera el scaffolding de proyectos de una solución .NET a partir de una arquitectura ya aprobada"
-name: new-scaffold-solution
+name: architect-new-scaffold-solution
 agent: architect
 argument-hint: "Resumen de la arquitectura aprobada (capas, proyectos, patrones)"
 ---

@@ -1,6 +1,6 @@
 ---
 description: "Propone una Clean Architecture completa para una solución .NET nueva, desde cero"
-name: new-solution-with-clean-architecture
+name: architect-new-clean-solution
 agent: architect
 argument-hint: "Dominio, requisitos principales y restricciones de la nueva solución"
 ---
